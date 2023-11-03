@@ -3,7 +3,8 @@ import React, { useState } from "react";
 
 const ItemsContext = React.createContext({
     items:[],
-    addItemToList:(item)=>{},
+    addItemsToList:(item)=>{},
+    increment:(item)=>{}
 })
 
 export const ItemsContextProvider=(props)=>{
@@ -27,10 +28,14 @@ export const ItemsContextProvider=(props)=>{
         })
      
   }
+  const incrementHandler=(item)=>{
+    setListItems(...listItems,item);
+}
 
     const itemsValue = {
         items:listItems,
-        addItemsToList:addItemToListHandler
+        addItemsToList:addItemToListHandler,
+        increment:incrementHandler
     }
 
     return <ItemsContext.Provider value={itemsValue}>
