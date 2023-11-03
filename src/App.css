@@ -1,0 +1,13 @@
+.App{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.upperbody{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
